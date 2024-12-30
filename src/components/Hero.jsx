@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useState } from 'react';
 import Button from './Button';
 import { TiLocationArrow } from 'react-icons/ti';
@@ -29,6 +29,10 @@ const Hero = () => {
   const handleVideoLoad = () => setLoadedVideos(prev=> prev + 1)
 
   const getVideoSrc = (index)=> `videos/hero-${index}.mp4`;
+
+  useEffect(()=>{
+    if(loadedVideos === totalVideos - 1) setIsLoading (false);
+  },[loadedVideos])
 
   useGSAP(()=>{
     if(hasClicked){
@@ -73,6 +77,15 @@ const Hero = () => {
   })
   return (
     <div className='relative h-dvh w-screen overflow-x-hidden'>
+      {isLoading && (
+        <div className='flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50'>
+          <div className="three-body">
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
+          </div>
+        </div>
+      )}
       <div id = "video-frame" 
       className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'>
         <div>
@@ -104,7 +117,6 @@ const Hero = () => {
 
           <video
           src ={getVideoSrc(bgVideoIndex === totalVideos +1 ? 1 : bgVideoIndex)}
-          // src ={getVideoSrc(currentIndex === totalVideos +1 ? 1 : currentIndex)}
           autoPlay
           loop
           muted
