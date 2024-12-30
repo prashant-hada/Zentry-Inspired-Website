@@ -25,6 +25,7 @@ function App() {
   // </main>
   <main className='relative min-h-screen w-screen overflow-x-hidden'>
     <Hero />
+    <section className='z-0 bg-blue-300 min-h-screen' />
   </main>
   )
 }
