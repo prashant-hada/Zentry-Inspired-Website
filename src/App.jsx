@@ -3,6 +3,7 @@ import Hero  from './components/Hero'
 import About from "./components/About"
 import Navbar from './components/Navbar'
 import Features from './components/Features'
+import Story from './components/Story'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <Hero />
     <About />
     <Features />
+    <Story />
     <section className='z-0 bg-blue-300 min-h-screen' />
   </main>
   )

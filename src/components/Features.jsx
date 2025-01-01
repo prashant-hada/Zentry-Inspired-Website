@@ -39,7 +39,8 @@ const Features = () => {
                 <BentoCard 
                 src="videos/feature-4.mp4"
                 title={<>A<b>Zu</b>L</>}
-                description='A cross-world AI Agent-elevating your gameplay to be more fun and productive'/>
+                description='A cross-world AI Agent-elevating your gameplay to be more fun and productive'
+                />
             </CardTiltWrapper>
             <CardTiltWrapper className="bento-tilt_2 rounded-lg">
                 <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
