@@ -117,7 +117,7 @@ const Hero = () => {
 
           <video
           src ={getVideoSrc(bgVideoIndex === totalVideos +1 ? 1 : bgVideoIndex)}
-          // autoPlay
+          autoPlay
           loop
           muted
           className='absolute left-0 top-0 size-full object-cover object-center'
@@ -125,8 +125,6 @@ const Hero = () => {
         </div>
         <h1 className='special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75'>
           <b>Gaming</b> 
-          {/* <br /> */}
-          {/* G<b>a</b>ming */}
         </h1>
         <div className='absolute left-0 top-0 z-40 size-full'>
           <div className='mt-24 px-4 sm:px-10'>
@@ -138,8 +136,6 @@ const Hero = () => {
       </div>
       <h1 className='special-font hero-heading absolute bottom-5 right-5 text-black'>
           <b>Gaming</b> 
-          {/* <br /> */}
-          {/* G<b>a</b>ming */}
         </h1>
     </div>
   )

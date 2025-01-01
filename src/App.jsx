@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Features from './components/Features'
 import Story from './components/Story'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
     <Features />
     <Story />
     <Contact />
-    <section className='z-0 bg-blue-300 min-h-screen' />
+    <Footer />
+    {/* <section className='z-0 bg-blue-300 min-h-screen' /> */}
   </main>
   )
 }
