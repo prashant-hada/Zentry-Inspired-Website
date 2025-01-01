@@ -8,7 +8,7 @@ const ImageClipBox=({src,clipClass})=>(
 )
 const Contact = () => {
   return (
-    <section id ='contact' className='my-24 min-h-96 w-screen px-6' >
+    <section id ='contact' className='my-24 min-h-96 w-screen  px-7' >
         <div className="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden">
             <div className="absolute -left-20 top-0 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96">
                 <ImageClipBox 
@@ -34,7 +34,7 @@ const Contact = () => {
                 <p className=' font-general text-[10px] uppercase'>Join Zentry</p>
                 <p className='special-font mt-10 w-full font-zentry text-5xl leading-[0.9] md:text-[6rem] z-50'>Les<b>t</b>'s B<b>u</b>i<b>l</b>d t<b>h</b>e<br /> <b>N</b>e<b>W</b> er<b>a</b> <b>o</b>f g<b>a</b>mi<b>n</b>g <br /> t<b>o</b>get<b>h</b>er</p>
 
-                <Button  title ='contact-us'
+                <Button  title ='contact us'
                 containerClass='mt-10 cursor-pointer bg-blue-50 font-semibold hover:bg-yellow-300 hover:scale-[0.95] transition-all duration-500 ease-in-out' />
             </div>
 
