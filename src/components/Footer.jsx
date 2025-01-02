@@ -11,7 +11,7 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className='w-screen bg-violet-300 py-4 text-black'>
+    <footer className='w-screen bg-violet-300 py-4 text-black flex justify-center flex-col items-center'>
         <div className="flex items-center justify-center h-16 w-screen mt-4 mb-12 lg:mb-40">
             <h1 className='uppercase text-9xl sm:text-[20vh] font-bold special-font text-black'><b>ZENTRY</b></h1>
         </div>
@@ -34,6 +34,11 @@ const Footer = () => {
             </div>
             <a href="#privacy-policy"
             className='text-center text-sm hover:underline md:text-right'>Privacy Policy</a>
+        </div>
+
+        <div id="disclaimer" className=' mt-10 h-40 w-screen md:w-[50vw] flex flex-col justify-center items-center px-12 '>
+            <p className='text-black text-sm font-semibold opacity-70'>Disclaimer: </p>
+            <p className='text-black text-center text-sm font-normal opacity-60'>This website is a personal project inspired by Zentry.com. It is not affiliated with or endorsed by Zentry.com.</p>
         </div>
     </footer>
   )

@@ -1,22 +1,24 @@
 import React from 'react'
 import Button from './Button'
 
-const ImageClipBox=({src,clipClass})=>(
+const ImageClipBox=({src,clipClass, animateClass})=>(
     <div className={clipClass}>
-        <img src={src} alt="" />
+        <img className={animateClass} src={src} alt="" />
     </div>
 )
 const Contact = () => {
   return (
     <section id ='contact' className='my-24 min-h-96 w-screen  px-7' >
         <div className="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden">
-            <div className="absolute -left-20 top-0 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96">
+            <div className="absolute -left-20 top-0 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96 transit ">
                 <ImageClipBox 
                 clipClass='contact-clip-path-1'
+                animateClass='transition hover:scale-[1.1] duration-500 ease-in-out'
                 src='img/contact-1.webp'
                 />
                 <ImageClipBox 
-                clipClass='contact-clip-path-2 lg:translate-y-40 translate-y-60 '
+                clipClass='contact-clip-path-2 lg:translate-y-40 translate-y-60'
+                animateClass='transition hover:scale-[1.1] duration-500 ease-in-out'
                 src='img/contact-2.webp'
                 />
             </div>
@@ -27,6 +29,7 @@ const Contact = () => {
                 />
                 <ImageClipBox 
                 clipClass='sword-man-clip-path md:scale-125'
+                animateClass='transition hover:scale-[1.1] duration-500 ease-in-out'
                 src='img/swordman.webp'
                 />
             </div>
