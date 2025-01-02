@@ -17,12 +17,20 @@ const About = () => {
                 pin:true,
                 pinSpacing:true,
             }
-        })
+        });
+        gsap.set("#about-frame", {
+            // clipPath: "polygon(10% 1%, 71% 9%, 88% 85%, 11% 100%)", // Initial trapezium
+            clipPath: "polygon(21% 5%, 76% 9%, 88% 95%, 20% 91%)", // Initial trapezium
+            // height:"68vh",
+            scale:0.9
+          });
 
-        clipAnimation.to('.mask-clip-path',{
+        clipAnimation.to('#about-frame',{
             width: '100vw',
             height:'100vh',
             borderRadius:0,
+            scale:1.1,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
         })
     })
   return (
@@ -37,10 +45,12 @@ const About = () => {
             </div>
         </div>
         <div id ="clip" className="h-dvh w-screen">
-            <div className="mask-clip-path about-image">
+            <div id='about-frame' className="mask-clip-path about-image ">
                 <img src="img/about.webp" alt="Background" 
                 className='absolute left-0 top-0 size-full object-cover'/>
             </div>
+            <img src="img/stones.webp" alt="Background" 
+                className='absolute left-0 top-0 size-full object-cover z-20'/>
         </div>
     </div>
   )
