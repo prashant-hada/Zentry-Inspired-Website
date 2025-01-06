@@ -1,4 +1,4 @@
-# Zenty-Inspired Website
+# Zenty-Inspired Website [🔗](https://zentry-inspired-project.netlify.app/)
 
 This project is my take on recreating some of the beautiful sections and effects from **[Zenty.com](https://www.zenty.com)**. I’ve used **React** with **Vite**, along with **Locomotive Scroll** for smooth scrolling and **GSAP** for those sleek animations. It’s been a fun learning experience, and I hope you enjoy exploring it as much as I did building it!.
 
