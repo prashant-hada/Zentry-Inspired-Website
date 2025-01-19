@@ -7,8 +7,8 @@ import gsap from 'gsap';
 const Navbar = () => {
     const navItems = ["Nexus", 'Vault', 'Prologue', 'About', 'Contact'];
     const {y:currentScrollY} =useWindowScroll();
-    const navContainerRef = useRef(null);
-    const audioElementRef = useRef(null);
+    const navContainerRef = useRef<HTMLDivElement | null>(null);
+    const audioElementRef = useRef<HTMLAudioElement | null>(null);
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
     const [isIndicatorActive, setIsIndicatorActive] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -20,21 +20,21 @@ const Navbar = () => {
     }
 
     useEffect(()=>{
-        isAudioPlaying?audioElementRef.current.play():audioElementRef.current.pause();
+        isAudioPlaying?audioElementRef.current?.play():audioElementRef.current?.pause();
     },[isAudioPlaying]);
 
     useEffect(()=>{
         if(currentScrollY === 0){
             setIsNavVisible(true);
-            navContainerRef.current.classList.remove('floating-nav');
+            navContainerRef.current?.classList.remove('floating-nav');
         }
         else if(currentScrollY>lastScrollY){
             setIsNavVisible(false);
-            navContainerRef.current.classList.add('floating-nav');
+            navContainerRef.current?.classList.add('floating-nav');
         }
         else if(currentScrollY<lastScrollY){
             setIsNavVisible(true);
-            navContainerRef.current.classList.add('floating-nav')
+            navContainerRef.current?.classList.add('floating-nav')
         }
 
         setLastScrollY(currentScrollY);

@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 
-const Button = ({id, rightIcon, leftIcon, title, containerClass}) => {
+interface ButtonProps {
+  id?:string;
+  rightIcon? : React.ReactNode;
+  leftIcon?:React.ReactNode;
+  title : string;
+  containerClass?: string
+}
+
+const Button = ({id, rightIcon, leftIcon, title, containerClass}: ButtonProps) => {
   return (
     <button id= {id} className={`${containerClass} group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full px-7 py-3 text-black`}>
         {leftIcon}

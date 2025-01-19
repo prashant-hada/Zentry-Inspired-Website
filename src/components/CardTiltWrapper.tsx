@@ -1,10 +1,15 @@
 import {useState, useRef} from 'react'
 
-const CardTiltWrapper = ({children, className =''}) => {
-    const [transformSTyle, setTransformSTyle] = useState("");
-    const itemRef = useRef();
+interface CardTiltWrapperProps{
+  children:React.ReactNode;
+  className?: string
+}
 
-    const handleMouseMove=(e)=>{
+const CardTiltWrapper = ({children, className =''}: CardTiltWrapperProps) => {
+    const [transformSTyle, setTransformSTyle] = useState("");
+    const itemRef = useRef<HTMLDivElement | null>(null);
+
+    const handleMouseMove=(e:React.MouseEvent<HTMLDivElement>): void =>{
         if(!itemRef.current)return;
 
         const {left, top, width, height} = itemRef.current.getBoundingClientRect();

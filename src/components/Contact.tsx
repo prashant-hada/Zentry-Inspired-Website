@@ -1,7 +1,13 @@
 import React from 'react'
 import Button from './Button'
 
-const ImageClipBox=({src,clipClass, animateClass})=>(
+interface ImageClipBoxProps{
+    src:string;
+    clipClass?: string;
+    animateClass?: string;
+}
+
+const ImageClipBox=({src,clipClass, animateClass}: ImageClipBoxProps)=>(
     <div className={clipClass}>
         <img className={animateClass} src={src} alt="" />
     </div>
