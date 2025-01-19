@@ -5,19 +5,21 @@ import RoundedCorners from './RoundedCorners';
 import Button from './Button';
 
 const Story = () => {
-    const frameRef = useRef();
+    const frameRef = useRef<HTMLImageElement | null>(null);
     const handleMouseLeave = ()=>{
         const element = frameRef.current;
 
-        gsap.to(element,{
-            duration:0.3,
-            rotateX: 0,
-            rotateY: 0,
-            ease: 'power1.inOut'
-        })
+        if(element){
+            gsap.to(element,{
+                duration:0.3,
+                rotateX: 0,
+                rotateY: 0,
+                ease: 'power1.inOut'
+            })
+        }
     }
 
-    const handleMouseMove = (e)=>{
+    const handleMouseMove = (e:React.MouseEvent<HTMLImageElement>)=>{
         const {clientX, clientY} = e;
         const element = frameRef.current;
 

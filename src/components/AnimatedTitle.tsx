@@ -2,7 +2,12 @@ import gsap from 'gsap';
 import React, { useRef } from 'react'
 import { useEffect } from 'react';
 
-const AnimatedTitle = ({title, containerClass}) => {
+interface AnimatedTitleProps {
+  title:string;
+  containerClass ? : string
+}
+
+const AnimatedTitle = ({title, containerClass}: AnimatedTitleProps) => {
     const containerRef = useRef(null);
 
     useEffect(()=>{
@@ -20,7 +25,7 @@ const AnimatedTitle = ({title, containerClass}) => {
             opacity:1,
             transform: 'translate3d(0,0,0) rotateY(0deg) rotateX(0deg)',
             ease:'power2.inOut',
-            stagger:'0.02'
+            stagger: 0.02  // have changes the value from string to number
           })
         }, containerRef)
 

@@ -16,7 +16,7 @@ const Hero = () => {
   const [loadedVideos, setLoadedVideos] = useState(0);
 
   const totalVideos = 4;
-  const nextVideoRef = useRef(null);
+  const nextVideoRef = useRef<HTMLVideoElement | null>(null);
 
   const upcomingVideoIndex = (currentIndex % totalVideos) +1 ;
 
@@ -28,7 +28,7 @@ const Hero = () => {
 
   const handleVideoLoad = () => setLoadedVideos(prev=> prev + 1)
 
-  const getVideoSrc = (index)=> `videos/hero-${index}.mp4`;
+  const getVideoSrc = (index:number)=> `videos/hero-${index}.mp4`;
 
   useEffect(()=>{
     if(loadedVideos === totalVideos - 1) setIsLoading (false);
@@ -45,7 +45,12 @@ const Hero = () => {
         height:'100%',
         duration:1,
         ease:'power1.inOut',
-        onStart:()=>nextVideoRef.current.play(),
+        onStart: () => {
+          if (nextVideoRef.current) {
+            nextVideoRef.current.play().catch(() => {}); // Handle the promise rejection silently
+          }
+          return; // Explicitly return `void`
+        }      
       });
 
       gsap.from('#current-video',{

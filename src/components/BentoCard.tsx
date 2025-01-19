@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BentoCard = ({title, src, description}) => {
+const BentoCard = ({title, src, description}:{title:React.ReactNode, src:string, description:string}) => {
   return (
     <div className='relative size-full'>
         <video className='absolute left-0 size-full object-cover object-center '
@@ -9,7 +9,7 @@ const BentoCard = ({title, src, description}) => {
         muted
         autoPlay
          />
-         <div className="mix-blend-difference relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
+         <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
             <div>
                 <h1 className='bento-title special-font'>{title}</h1>
                 {description && (
