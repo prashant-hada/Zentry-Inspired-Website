@@ -14,7 +14,7 @@ Check out the project in action! Here’s a short video showcasing the recreated
  
 [Watch the demo](https://drive.google.com/file/d/1K_djfCEEb-WIrVuJJVUl9-ZC-RJXElu-/view?usp=sharing)
 
-## Setup Instructions
+## Set-up Instructions
 
 1.  **Clone the repository:**
 
