@@ -4,7 +4,7 @@ This project is my take on recreating some of the beautiful sections and effects
 
 ## Features
 
--   Smooth scrolling with Locomotive Scroll.
+-   Smooth scrolling.
 -   Eye-catching animations that bring the site to life.
 -   Modern and responsive design.
 
